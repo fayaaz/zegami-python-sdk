@@ -20,6 +20,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
+        'azure-storage-blob>=12.8.1',
         'colorama',
         'importlib-metadata',
         'keyring',
