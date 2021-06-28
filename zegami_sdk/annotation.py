@@ -102,10 +102,13 @@ class AnnotationMask(_Annotation):
 
     def __init__(
         self, collection, row_index, source=None, from_filepath=None,
-        from_url=None, imageset_id=None, image_index=None):
+        from_url=None, imageset_id=None, image_index=None
+    ):
 
-        super(AnnotationMask, self).__init__(self, collection, row_index, source,
-        from_filepath, from_url, imageset_id, image_index)
+        super(AnnotationMask, self).__init__(
+            self, collection, row_index, source,
+            from_filepath, from_url, imageset_id, image_index
+        )
 
     @classmethod
     def create_uploadable(cls, bool_mask):
