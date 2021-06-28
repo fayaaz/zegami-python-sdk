@@ -18,7 +18,7 @@ setup(
     author='Zegami Ltd',
     author_email='help@zegami.com',
     license='Apache 2.0',
-    packages= [
+    packages=[
         'zegami_sdk'
     ],
     include_package_data=True,

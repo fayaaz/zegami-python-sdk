@@ -5,7 +5,12 @@ Apache 2.0
 """
 
 
-def add_node(client, workspace, action, params={}, type="dataset", dataset_parents=None, imageset_parents=None, name="New node"):
+def add_node(
+        client, workspace, action,
+        params={}, type="dataset", dataset_parents=None,
+        imageset_parents=None, name="New node"
+    ):  # noqa: E121,E125
+
     """Create a new processing node."""
     assert type in ["dataset", "imageset"]
 
