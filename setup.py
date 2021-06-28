@@ -20,7 +20,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        'azure-storage-blob',
+        'azure-storage-blob>=12.8.1',
         'python-magic',
         'python-magic-bin; platform_system=="Windows"',
         'colorama',
