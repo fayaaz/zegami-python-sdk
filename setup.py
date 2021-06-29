@@ -2,7 +2,19 @@ import os
 import pathlib
 from setuptools import setup
 
-version = os.environ.get('ZEGAMI_SDK_VERSION', '')
+# Update version here when you want to increment the version in PyPi
+sdk_version = '0.2.5'
+
+# If no ZEGAMI_SDK_VERSION set use the version
+try:
+    version = os.environ['ZEGAMI_SDK_VERSION']
+    if version == '':
+        raise KeyError
+except KeyError:
+    version = sdk_version
+    if not os.environ.get('SDK_PRODUCTION_BUILD'):
+        version += '+dev'
+
 
 HERE = pathlib.Path(__file__).parent
 with open('README.md', 'r', encoding='utf-8') as f:
